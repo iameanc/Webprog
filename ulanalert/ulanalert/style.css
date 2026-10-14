@@ -1,0 +1,197 @@
+:root {
+  color-scheme: light;
+  --bg: #edf5ff;
+  --fg: #173b65;
+  --card: #fff;
+  --acc: #276fe5;
+  --bd: #dce9fb;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  min-height: 36px;
+  padding: 0.35rem 1rem;
+  background: var(--card);
+  border-bottom: 1px solid var(--bd);
+}
+nav a {
+  color: var(--acc);
+  text-decoration: none;
+}
+.sp {
+  flex: 1;
+}
+main {
+  max-width: 1050px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+h2 {
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+input,
+select,
+button,
+textarea {
+  padding: 0.55rem;
+  border: 1px solid var(--bd);
+  border-radius: 6px;
+  font: inherit;
+  background: var(--card);
+  color: var(--fg);
+}
+button {
+  background: var(--acc);
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.badge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 99px;
+  background: var(--bd);
+  width: fit-content;
+  color: #1d2433;
+}
+.err {
+  color: #d33;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--bd);
+  text-align: left;
+}
+.bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.bar input {
+  flex: 1;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 1rem;
+}
+.hero {
+  background: linear-gradient(110deg, #2470e4 0%, #70a9f9 58%, #ffcf59 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  box-shadow: 0 12px 24px rgba(39, 111, 229, 0.12);
+}
+.hero h1 {
+  margin: 0.2rem 0;
+  font-size: 2.4rem;
+}
+.temperature {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+#weather-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.advice {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+.advice b {
+  font-size: 1.4rem;
+}
+.row {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+.row .card {
+  min-width: 92px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.forecast-icon {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+#rf {
+  background: var(--card);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#rf input,
+#rf select,
+#rf button {
+  width: 100%;
+  min-height: 42px;
+}
+.Light {
+  background: #cfe8ff;
+}
+.Heavy {
+  background: #ffd9a8;
+}
+.Flooded {
+  background: #ffb3b3;
+}
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  main {
+    margin: 0.75rem auto;
+  }
+}
